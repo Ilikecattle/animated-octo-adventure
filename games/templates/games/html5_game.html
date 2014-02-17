@@ -1,0 +1,10 @@
+{% extends 'games/base_game.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h1>{{ game.name }}</h1>
+<iframe src="{% static game.location %}" name="targetframe" 
+    allowTransparency="true" scrolling="no" frameborder="0"
+    width="{{ game.width }}" height="{{ game.height }}">
+</iframe>
+{% endblock %}

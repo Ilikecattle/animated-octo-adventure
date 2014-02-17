@@ -1,0 +1,11 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+{% for game in latest_games_list %}
+    <div>
+        <h2><a href="{% url 'games.views.detail' game.name %}">{{ game.name }}</a></h2>
+        <p>Description:</p>
+        <p>{{ game.description }}</p>
+    </div>
+{% endfor %}
+{% endblock %}

@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'games',
+    'common',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +64,12 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/home/adam/catharticgames/catharticgames/static/',
+    '/home/adam/catharticgames/games/static/',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

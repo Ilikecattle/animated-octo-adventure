@@ -1,0 +1,14 @@
+{% extends 'games/base_game.html' %}
+{% load staticfiles %}
+
+{%block scripts %}
+<script type="text/javascript" src="{% static 'js/swfobject.js' %}"></script>
+<script type="text/javascript">
+    swfobject.registerObject("game", "11.1.0");
+    swfobject.embedSWF("{{ game.location }}", "game", "800", "600", "11.1.0");
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="game"></div>
+{% endblock %}

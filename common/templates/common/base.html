@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+    <title>{% block title %}Cathartic Games{% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="cathartic, games" />
+    <meta name="author" content="Adam Berg" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/theme.css' %}" />
+    {% block scripts %}{% endblock %}
+    </head>
+
+    <body>
+
+    <header>
+        <h1>Cathartic Games</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#development">Development</a></li>
+        <ul>
+    </nav>
+
+    {% block content_title %}{% endblock %}
+    {% block content %}{% endblock %}
+    <footer>
+        {% block footer %}{% endblock %}
+    </footer>
+    </body>
+</html>
