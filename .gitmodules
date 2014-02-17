@@ -1,3 +1,6 @@
 [submodule "env"]
 	path = env
 	url = ./env/
+[submodule "bootstrap"]
+	path = bootstrap
+	url = ./catharticgames/static/bootstrap/
