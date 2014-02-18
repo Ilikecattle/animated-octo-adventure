@@ -26,6 +26,7 @@ class Game(models.Model):
     width = models.IntegerField(blank=True)
     height = models.IntegerField(blank=True)
     categories = models.ManyToManyField(Category, through=Category.games.through, blank=True)
+    thumbnail = models.CharField(max_length=100, blank=True)
     
     def __unicode__(self):
         return self.name

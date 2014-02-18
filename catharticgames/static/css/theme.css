@@ -57,12 +57,39 @@ a:focus, a:active{
 
 //------------THEME------------//
 
-header {
+.header {
     display: block;
-    color: #AAA;
-    text-align: center;
+}
+
+.navbar {
+    background: #4e4e4e;
+    margin: 0;
 }
 
 h1 {
     text-align: center;
+}
+
+body {
+    background: #161617;
+}
+
+#content {
+    padding-top: 10px;
+    background: white;
+    min-height: 800px;
+}
+
+.thumbnail {
+    min-height: 400px;
+}
+
+.footer-wrapper {
+    background: #161617;
+    color: #c0c0c0;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.footer {
+    padding: 20px;
 }

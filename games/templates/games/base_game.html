@@ -2,5 +2,14 @@
 
 {% block title %}{{ game.name }}{% endblock %}
 
+{% block content_title %}
+    <h1>{{ game.name }}</h1>
+{% endblock %}
+
 {% block content %}
+<br>
+<div class="well">
+    <p>Description:</p>
+    <p>{{ game.description }}</p>
+</div>
 {% endblock %}

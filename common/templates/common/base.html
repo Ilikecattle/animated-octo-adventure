@@ -1,38 +1,65 @@
 {% load static %}
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html lang="en">
     <head>
     <title>{% block title %}Cathartic Games{% endblock %}</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="cathartic, games" />
     <meta name="author" content="Adam Berg" />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'bootstrap/dist/css/bootstrap-theme.min.css' %}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/theme.css' %}" />
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    
     {% block scripts %}{% endblock %}
     </head>
 
     <body>
 
-    <header>
-        <h1>Cathartic Games</h1>
-    </header>
+      <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">Cathartic Games</a>
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="../getting-started">Getting started</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://expo.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Expo</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-    <nav>
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#history">History</a></li>
-            <li><a href="#development">Development</a></li>
-        <ul>
-    </nav>
-
+    <div id="content">
     {% block content_title %}{% endblock %}
+    <div class="container">
     {% block content %}{% endblock %}
-    <footer>
-        {% block footer %}{% endblock %}
-    </footer>
+    </div>
+    </div>
+      <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            Powered by Adam Berg
+          </div>
+        </div>
+      </div>
+      </footer>
     </body>
 </html>
