@@ -37,6 +37,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
+    'userena',
+    'userena.contrib.umessages',
+    'guardian',
+    'easy_thumbnails',
+    'accounts',
     'games',
     'common',
 )
@@ -50,10 +55,27 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+AUTHENTICATION_BACKENDS = (
+    'userena.backends.UserenaAuthenticationBackend',
+    'guardian.backends.ObjectPermissionBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_REDIRECT_URL = '/accounts/%(username)s/'  
+LOGIN_URL = '/accounts/signin/'  
+LOGOUT_URL = '/accounts/signout/'  
+
 ROOT_URLCONF = 'catharticgames.urls'
 
 WSGI_APPLICATION = 'catharticgames.wsgi.application'
 
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
+ANONYMOUS_USER_ID = -1
+
+AUTH_PROFILE_MODULE = 'accounts.Profile'
+
+MEDIA_ROOT = '/home/adam/catharticgames'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases

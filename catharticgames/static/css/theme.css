@@ -66,6 +66,10 @@ a:focus, a:active{
     margin: 0;
 }
 
+.icon-bar {
+    background: white;
+}
+
 h1 {
     text-align: center;
 }
