@@ -37,11 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
-    'userena',
-    'userena.contrib.umessages',
-    'guardian',
-    'easy_thumbnails',
-    'accounts',
     'games',
     'common',
 )
@@ -77,20 +72,22 @@ AUTH_PROFILE_MODULE = 'accounts.Profile'
 
 MEDIA_ROOT = '/home/adam/catharticgames'
 
+FORCE_SCRIPT_NAME = ''
+
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'catharticgames.db'),
     }
 }
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    '/home/adam/catharticgames/catharticgames/static/',
-    '/home/adam/catharticgames/games/static/',
+    '/home/content/28/9945728/code/catharticgames/catharticgames/static/',
+    '/home/content/28/9945728/code/catharticgames/games/static/',
 )
 
 # Internationalization
