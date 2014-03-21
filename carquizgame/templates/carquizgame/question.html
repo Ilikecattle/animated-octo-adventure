@@ -16,7 +16,7 @@
 
 {% block content %}
     <div class='quiz-container text-center'>
-        <img src="{{ car.imageLink }}"/>
+        <a href="{{ car.link }}"><img src="{{ car.imageLink }}"/></a>
         <div class="btn-group btn-group-justified">
         {% for year in year_options %}
           <div class="btn-group">
