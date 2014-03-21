@@ -5,7 +5,6 @@ class Car(models.Model):
     imageLink = models.CharField(max_length=100, blank=True)
     link = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='caroftheday')
     year = models.IntegerField()
     make = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
