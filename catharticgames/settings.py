@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'south',
     'games',
     'common',
+    'caroftheday',
+    'carquizgame',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,7 +72,8 @@ ANONYMOUS_USER_ID = -1
 
 AUTH_PROFILE_MODULE = 'accounts.Profile'
 
-MEDIA_ROOT = '/home/adam/catharticgames'
+MEDIA_ROOT = '/home/adam/catharticgames/media'
+MEDIA_URL = '/media/'
 
 FORCE_SCRIPT_NAME = ''
 

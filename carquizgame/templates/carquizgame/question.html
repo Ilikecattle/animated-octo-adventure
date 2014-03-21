@@ -1,0 +1,64 @@
+{% extends 'common/base.html' %}
+
+{% load static %}
+
+{% block title %}Car Quiz Game{% endblock %}
+
+{% block scripts %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/carquizgame.css' %}" />
+    <script type="text/javascript" src="{% static 'js/carquizgame.js' %}"></script>
+    <script type="text/javascript" >
+        var carOfDayDate = "{{ car.get_date_string }}";
+    </script>
+{% endblock %}
+
+{% block content_title %}<h1>Car Quiz Game</h1>{% endblock %}
+
+{% block content %}
+    <div class='quiz-container text-center'>
+        <img src="{{ car.imageLink }}"/>
+        <div class="btn-group btn-group-justified">
+        {% for year in year_options %}
+          <div class="btn-group">
+            <button type="button" class="btn btn-default btn-guess-year">{{ year }}</button>
+          </div>
+        {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="correctModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Correct!</h4>
+          </div>
+          <div class="modal-body">
+            This is a {{ car.get_description }}
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'carquizgame.views.index' %}"><button type="button" class="btn btn-primary">Next</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Incorrect!</h4>
+          </div>
+          <div class="modal-body">
+            This is a {{ car.get_description }}
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'carquizgame.views.index' %}"><button type="button" class="btn btn-primary">Next</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+{% endblock %}
