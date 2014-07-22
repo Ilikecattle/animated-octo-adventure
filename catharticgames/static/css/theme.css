@@ -57,31 +57,39 @@ a:focus, a:active{
 
 //------------THEME------------//
 
-.header {
-    display: block;
-}
-
 .navbar {
-    background: #4e4e4e;
     margin: 0;
 }
 
-.icon-bar {
-    background: white;
+header {
+	background: #161617;
 }
 
 h1 {
+	font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 70px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+h2 {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    line-height: 60px;
     text-align: center;
 }
 
-body {
-    background: #161617;
+p {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
 }
 
 #content {
     padding-top: 10px;
-    background: white;
-    min-height: 800px;
+    height: 100%;
 }
 
 .thumbnail {
