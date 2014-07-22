@@ -8,10 +8,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'^accounts/', include('userena.urls')),
-    # url(r'^messages/', include('userena.contrib.umessages.urls')),
     url(r'^carquizgame/', include('carquizgame.urls')),
-    url(r'^', include('games.urls')),
+    url(r'^games/', include('games.urls')),
+    url(r'^',include('games.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()
