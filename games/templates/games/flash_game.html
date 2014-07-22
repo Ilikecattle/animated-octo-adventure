@@ -5,7 +5,7 @@
 <script type="text/javascript" src="{% static 'js/swfobject.js' %}"></script>
 <script type="text/javascript">
     swfobject.registerObject("game", "11.1.0");
-    swfobject.embedSWF("{% static game.location %}", "game", "{{ game.width }}", "{{ game.height }}", "11.1.0");
+    swfobject.embedSWF("{% static game.location %}", "game", "100%", "{{ game.height }}", "11.1.0");
 </script>
 {% endblock %}
 
