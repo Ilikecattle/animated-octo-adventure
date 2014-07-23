@@ -49,7 +49,7 @@ ANONYMOUS_USER_ID = -1
 
 AUTH_PROFILE_MODULE = 'accounts.Profile'
 
-MEDIA_ROOT = '/home1/cathart1/django_projects/catharticgames/media'
+MEDIA_ROOT = BASE_DIR + '/media/'
 MEDIA_URL = '/media/'
 
 FORCE_SCRIPT_NAME = ''
@@ -62,7 +62,7 @@ DATABASES = {
 }
 
 STATICFILES_DIRS = (
-    '/home1/cathart1/django_projects/catharticgames/catharticgames/static/',
+    BASE_DIR + '/catharticgames/static/',
 )
 
 STATICFILES_FINDERS = (
@@ -86,5 +86,5 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-STATIC_ROOT ='/home1/cathart1/django_projects/catharticgames/static'
+STATIC_ROOT = BASE_DIR + '/static/'
 STATIC_URL = '/static/'

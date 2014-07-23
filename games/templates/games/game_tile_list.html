@@ -1,0 +1,5 @@
+<div class="row">
+{% for game in games %}
+  {% include "games/game_tile.html" with game=game %}
+{% endfor %}
+</div>

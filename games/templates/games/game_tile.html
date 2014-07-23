@@ -1,0 +1,15 @@
+{% load static %}
+
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    {% if game.thumbnail %}
+    <a href="{% url 'games.views.detail'  game.name %}">
+      <img data-src="holder.js/300x200" alt="{{ game.name }}" src="{% static game.thumbnail %}">
+    </a>
+    {% endif %}
+    <div class="caption text-center">
+      <h3><a href="{% url 'games.views.detail' game.name %}">{{ game.name }}</a></h3>
+      <p>{{ game.description }}</p>
+    </div>
+  </div>
+</div>

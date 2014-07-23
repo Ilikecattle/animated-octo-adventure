@@ -1,0 +1,5 @@
+{% extends 'common/__base.html' %}
+
+{% block content %}
+  {% include "games/game_tile_list.html" with games=latest_games_list %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "common/__l_right_sidebar.html" %}
+
+{% block title %}{{ article.title }} | {{ block.super }}{% endblock %}
+
+{% block main_col %}
+    {% include "common/_article_full.html" %}
+{% endblock %}
+
+{% block side_col %}
+    {% include "common/_tag_list.html" with tags=article.tags.all %}
+    {% include "common/_category_list.html" with categories=article.categories.all %}
+{% endblock %}
