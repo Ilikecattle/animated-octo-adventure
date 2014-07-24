@@ -96,18 +96,12 @@ p {
     min-height: 400px;
 }
 
-.footer-wrapper {
-    background: #161617;
-    color: #c0c0c0;
-    color: rgba(255, 255, 255, 0.65);
-}
-
 footer {
-   position:absolute;
+   position:static;
    bottom:0;
    width:100%;
-   line-height: 60px;
-   height:60px;
+   line-height: 100px;
    background: #161617;
    color: white;
+   font-weight: bold;
 }
