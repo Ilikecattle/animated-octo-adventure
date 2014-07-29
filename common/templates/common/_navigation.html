@@ -12,11 +12,12 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/"><i class="glyphicon glyphicon-home"></i> Home</a></l>
-        <li class="dropdown">
+        <li class="{% ifequal request.path '/' %} active {% endifequal %}"><a href="/"><i class="glyphicon glyphicon-home"></i> Home</a></l>
+        {% url 'games.views.detail' 'i_solated' as i_solated_url %}
+        <li class="dropdown {% ifequal request.path i_solated_url %}active{% endifequal %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Games <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="{% url 'games.views.detail' 'i_solated' %}">i_solated</a></li>
+            <li class="{% ifequal request.path i_solated_url %}active{% endifequal %}"><a href="{{i_solated_url}}">i_solated</a></li>
           </ul>
         </li>
       </ul>
