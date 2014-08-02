@@ -1,6 +1,7 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+SITE_ID = 1
 SECRET_KEY = ')#rns-h9guyb6db=%g5!$4!6_tkzt1f-hyi%-(40lh)z+*)tr^'
 DEBUG = True
 TEMPLATE_DEBUG = True
@@ -10,6 +11,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',

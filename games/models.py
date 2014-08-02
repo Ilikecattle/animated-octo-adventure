@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.sites.models import Site
 
 class Category(models.Model):
     class Meta():
@@ -27,6 +28,11 @@ class Game(models.Model):
     height = models.IntegerField(blank=True)
     categories = models.ManyToManyField(Category, through=Category.games.through, blank=True)
     thumbnail = models.CharField(max_length=100, blank=True)
+    sites = models.ManyToManyField(Site)
     
+    def get_absolute_url(self):
+        from django.core.urlresolvers import reverse
+        return reverse('games.views.game', args=[self.name])
+
     def __unicode__(self):
         return self.name
