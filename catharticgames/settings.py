@@ -21,6 +21,7 @@ INSTALLED_APPS = (
     'common',
     'caroftheday',
     'carquizgame',
+    'LOML',
 )
 
 MIDDLEWARE_CLASSES = (

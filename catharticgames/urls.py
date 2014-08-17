@@ -33,6 +33,7 @@ sitemaps = {
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^games/', include('games.urls')),
+    url(r'^loml/', include('LOML.urls')),
     url(r'^$', views.home_page, name='home_page'),
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
     {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
