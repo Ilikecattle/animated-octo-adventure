@@ -10,4 +10,4 @@ def message(request):
     except:
         raise Http404
 
-    return HttpResponse(message.text, content_type="text/plain")
+    return HttpResponse(message.text)
