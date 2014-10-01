@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.shortcuts import render
 from datetime import date
 
@@ -10,4 +10,12 @@ def message(request):
     except:
         raise Http404
 
-    return render(request, 'LOML/message.html', {'message': message})
+    return HttpResponse(message.text)
+
+def url(request):
+    try:
+        message = Message.objects.get(date=date.today)
+    except:
+        raise Http404
+
+    return HttpResponse(message.url)
